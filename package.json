@@ -1,0 +1,26 @@
+{
+  "name": "zerto",
+  "version": "1.0.0",
+  "description": "Zerto technical task",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "pm2 start eco.json",
+    "test": "npm test"
+  },
+  "author": "strafe",
+  "license": "ISC",
+  "dependencies": {
+    "config": "1.26.1",
+    "koa": "2.3.0",
+    "koa-router": "7.2.1"
+  },
+  "devDependencies": {
+    "pm2": "2.6.1",
+    "babel-eslint": "7.2.3",
+    "eslint": "3.19.0",
+    "eslint-config-react": "1.1.7",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-react": "7.1.0"
+  }
+}
