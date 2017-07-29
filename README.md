@@ -14,7 +14,7 @@ docker build .
 docker run -p 3000:3000 -p 5672:5672 IMAGE_ID
 ```
 
-or manually
+or manually (nodejs 8 or later needed)
 
 ```bashp
 npm install
@@ -27,7 +27,7 @@ npm test
 ```
 ### Web API
 Single web endpoint can be found here:
-GET /exec/:scriptName
+GET http://127.0.0.1:3000/exec/:scriptName
 
 You can test it with curl or browser.
 
