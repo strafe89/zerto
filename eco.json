@@ -4,8 +4,7 @@
             "name": "zerto rpc",
             "script": "./app.js",
             "env": {
-                "NODE_APP_INSTANCE": "",
-                "NODE_ENV": "dev"
+                "NODE_APP_INSTANCE": ""
             },
             "watch": true
         }
