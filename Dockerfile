@@ -1,24 +1,14 @@
-FROM node:7.10.0
+FROM node:8.2.1
 
-# Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# commented because we do npm install and build in CI
-# COPY package.json /usr/src/app/
-# RUN npm install
-# RUN npm run build
-# for yarn
-# COPY yarn.lock /usr/src/app/
-# RUN yarn --ignore-engines
+COPY package.json /usr/src/app/
+RUN npm install
+RUN npm test
 
-# Bundle app source
 COPY . /usr/src/app
 
-ARG NODE_ENV
-ENV NODE_ENV=${NODE_ENV}
+ENV NODE_ENV=dev
 
-# no default command
-# each service has its own run cmd, that defined in ./deploy/aws-ecs.sh
-# CMD [ "npm", "run", "docker-dash" ]
+CMD [ "npm", "start" ]

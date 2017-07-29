@@ -2,18 +2,23 @@
   "name": "zerto",
   "version": "1.0.0",
   "description": "Zerto technical task",
-  "main": "index.js",
+  "main": "app.js",
+  "engines" : { "node" : ">=8.0.0" },
   "scripts": {
     "start": "node app.js",
     "dev": "pm2 start eco.json",
-    "test": "npm test"
+    "test": ""
   },
   "author": "strafe",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "0.5.1",
     "config": "1.26.1",
     "koa": "2.3.0",
-    "koa-router": "7.2.1"
+    "koa-cors": "0.0.16",
+    "koa-logger-winston": "0.0.2",
+    "koa-router": "7.2.1",
+    "winston": "2.3.1"
   },
   "devDependencies": {
     "pm2": "2.6.1",

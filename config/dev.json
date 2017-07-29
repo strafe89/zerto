@@ -1,0 +1,9 @@
+{
+    "api": {
+        "port": 3000
+    },
+    "rabbit": {
+        "enabled": true,
+        "url": "amqp://rlz:admin@rabbit-stage-676462617.eu-west-1.elb.amazonaws.com:5672"
+    }
+}
