@@ -12,4 +12,6 @@ RUN npm test
 
 ENV NODE_ENV=dev
 
+EXPOSE 3000 5672
+
 CMD [ "npm", "start" ]
