@@ -65,4 +65,24 @@ describe('script executing test', function() {
         assert.equal(result.success, false);
         assert.equal(typeof result.error, 'object');
     });
+
+    it('empty script name', async function() {
+        const scriptName = '';
+        const result = await execEngine.execute(scriptName);
+
+        assert.equal(typeof result, 'object');
+        assert.equal(result.success, false);
+        assert.equal(typeof result.error, 'object');
+        assert.equal(result.error.reason, 'Invalid script name');
+    });
+
+    it('invalid script name', async function() {
+        const scriptName = {};
+        const result = await execEngine.execute(scriptName);
+
+        assert.equal(typeof result, 'object');
+        assert.equal(result.success, false);
+        assert.equal(typeof result.error, 'object');
+        assert.equal(result.error.reason, 'Invalid script name');
+    });
 });

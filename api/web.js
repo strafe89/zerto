@@ -8,4 +8,10 @@ router.get('/exec/:scriptName', async function(ctx) {
     ctx.body = result;
 });
 
+router.get('/scripts', async function(ctx) {
+    const scriptsList = await execEngine.getScriptsList();
+
+    ctx.body = { scripts: scriptsList };
+});
+
 module.exports = router;
