@@ -26,12 +26,15 @@ To run unit tests
 npm test
 ```
 ### Web API
-Single web endpoint can be found here:
-GET http://127.0.0.1:3000/exec/:scriptName
+API is running on 3000 port by default.
+Only 2 web endpoints available:
+GET /scripts - scripts list
+GET /exec/:scriptName - name could be with .js extension or without it
 
 You can test it with curl or browser.
 
 ### Message queue client
+Default rabbit port is 5672.
 Also service is reachable using RabbitMQ, 
 to test it you need specify RabbitMQ server url and set "rabbit.enabled" flag in config to true.
 After that you can use RabbitMQ admin dashboard to send messages to zerto_rpc queue.
